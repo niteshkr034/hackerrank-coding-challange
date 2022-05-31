@@ -54,11 +54,11 @@ function readLine() {
     return input_stdin_array[input_currentline++];
 }
 
-// Main function
+/////////Function///////////
 function solveMeFirst(a, b) {
   return a+b; 
 }
-// 
+////////////////////////////
 
 function main() {
     var a = parseInt(readLine());
