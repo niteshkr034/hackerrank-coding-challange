@@ -6,14 +6,22 @@
 
 ////////////////////////////
 
-function staircase(n) {
+arr = [1,2,3,4,5];
+
+function miniMaxSum(arr) {
   // Write your code here
-  let space=""
-  let hash=""
-  for (let i = 1; i <= n ; i++) {
-    space = " ".repeat(n - i);
-    hash = "#".repeat(i);
-    console.log(space+hash);
+  arr.sort(function(a,b){return a-b})
+  min=0
+  max=0
+  for(let i=0; i<arr.length; i++){
+    if  (i<arr.length-1)
+    {min+=arr[i]}
+    if(i>0)
+    {max+=arr[i]}
+        
   }
+  console.log(min,max)
+
 }
-staircase(5);
+
+miniMaxSum(arr)
