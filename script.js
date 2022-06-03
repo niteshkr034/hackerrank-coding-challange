@@ -6,22 +6,17 @@
 
 ////////////////////////////
 
-arr = [1,2,3,4,5];
+candles = [2,1,2,3,3,3,4,4,5,5,5,6,1,8,8,8]
+candle = [1,2,3,4,5]
 
-function miniMaxSum(arr) {
+
+
+function birthdayCakeCandles(candles) {
   // Write your code here
-  arr.sort(function(a,b){return a-b})
-  min=0
-  max=0
-  for(let i=0; i<arr.length; i++){
-    if  (i<arr.length-1)
-    {min+=arr[i]}
-    if(i>0)
-    {max+=arr[i]}
-        
-  }
-  console.log(min,max)
-
+  let highest;
+  let count;
+  highest = Math.max(...candles);
+  count=candles.filter(x  => x==highest).length
+  return count;
+    
 }
-
-miniMaxSum(arr)
